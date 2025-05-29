@@ -11,7 +11,7 @@ export const DEFAULT_PROVIDER = {
   }),
   bitcoin: new Provider({
     url: 'https://mainnet.sandshrew.io',
-    version: 'v2',
+    version: 'v1',
     projectId: process.env.SANDSHREW_PROJECT_ID!,
     network: bitcoin.networks.bitcoin,
     networkType: 'mainnet',
