@@ -26,3 +26,4 @@ export declare class AlkanesRpc {
         txindex: number;
     }[]>;
 }
+//# sourceMappingURL=alkanes.d.ts.map

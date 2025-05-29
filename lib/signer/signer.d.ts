@@ -65,5 +65,6 @@ export declare class Signer {
         address?: string;
         keypair: ECPairInterface;
         protocol: 'ecdsa' | 'bip322';
-    }): Promise<string>;
+    }): Promise<string | undefined>;
 }
+//# sourceMappingURL=signer.d.ts.map

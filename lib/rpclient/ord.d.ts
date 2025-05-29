@@ -17,7 +17,7 @@ export interface OrdOutput {
 export declare class OrdRpc {
     ordUrl: string;
     constructor(url: string);
-    _call(method: string, params?: any[]): Promise<any>;
+    _call(method: string, params?: never[]): Promise<any>;
     getInscriptionById(inscriptionId: string): Promise<any>;
     getInscriptionContent(inscriptionId: string): Promise<any>;
     getInscriptionByNumber(number: string): Promise<any>;
@@ -27,7 +27,7 @@ export declare class OrdRpc {
     getInscriptionBySat(satNumber: string): Promise<any>;
     getInscriptionBySatWithIndex(satNumber: string, index?: string): Promise<any>;
     getInscriptionChildren(inscriptionId: string, page?: string): Promise<any>;
-    getInscriptionMetaData(inscriptionId: string): Promise<import("..").DecodedCBOR>;
+    getInscriptionMetaData(inscriptionId: string): Promise<import("../shared/interface").DecodedCBOR>;
     getTxOutput(txIdVout: string): Promise<OrdOutput>;
     getSatByNumber(number: string): Promise<any>;
     getSatByDecimal(decimal: string): Promise<any>;
@@ -39,3 +39,4 @@ export declare class OrdRpc {
     getRunes(): Promise<any>;
     getOrdData(address: string): Promise<any>;
 }
+//# sourceMappingURL=ord.d.ts.map

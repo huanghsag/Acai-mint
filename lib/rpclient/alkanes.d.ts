@@ -131,6 +131,7 @@ export declare class AlkanesRpc {
         bytes: string;
         le: string;
         be: string;
-    };
+    } | undefined;
 }
 export {};
+//# sourceMappingURL=alkanes.d.ts.map

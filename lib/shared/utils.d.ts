@@ -76,23 +76,23 @@ export declare function hexToLittleEndian(hex: string): string;
 export declare const createRuneSendScript: ({ runeId, amount, divisibility, sendOutputIndex, pointer, }: {
     runeId: string;
     amount: number;
-    divisibility?: number;
-    sendOutputIndex?: number;
+    divisibility?: number | undefined;
+    sendOutputIndex?: number | undefined;
     pointer: number;
 }) => Buffer;
 export declare const createRuneMintScript: ({ runeId, pointer, }: {
     runeId: string;
-    pointer?: number;
+    pointer?: number | undefined;
 }) => Buffer;
 export declare const createRuneEtchScript: ({ pointer, runeName, symbol, divisibility, perMintAmount, premine, cap, turbo, }: {
-    pointer?: number;
+    pointer?: number | undefined;
     runeName: string;
     symbol: string;
-    divisibility?: number;
+    divisibility?: number | undefined;
     perMintAmount: number;
-    cap?: number;
-    premine?: number;
-    turbo?: boolean;
+    cap?: number | undefined;
+    premine?: number | undefined;
+    turbo?: boolean | undefined;
 }) => Buffer;
 export declare function getAddressType(address: string): AddressType | null;
 export declare function getAddressKey(address: string): AddressKey;
@@ -123,7 +123,7 @@ export declare function findRuneUtxosToSpend(utxos: RuneUtxo[], target: number):
     selectedUtxos: RuneUtxo[];
     change: number;
     totalSatoshis: number;
-};
+} | undefined;
 export declare function findXAmountOfSats(utxos: FormattedUtxo[], target: number): {
     utxos: FormattedUtxo[];
     totalAmount: number;
@@ -131,3 +131,4 @@ export declare function findXAmountOfSats(utxos: FormattedUtxo[], target: number
 export declare function decodeCBOR(hex: string): DecodedCBOR;
 export declare const getVSize: (data: Buffer) => number;
 export declare const packUTF8: (s: any) => string[];
+//# sourceMappingURL=utils.d.ts.map

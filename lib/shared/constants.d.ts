@@ -13,3 +13,4 @@ export declare const getBrc20Data: ({ amount, tick, }: {
     mediaContent: string;
     mediaType: string;
 };
+//# sourceMappingURL=constants.d.ts.map

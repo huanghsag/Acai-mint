@@ -57,10 +57,11 @@ export declare const addressBalance: ({ address, provider, }: {
 export declare const addressUtxos: ({ address, provider, spendStrategy, }: {
     address: string;
     provider: Provider;
-    spendStrategy?: SpendStrategy;
+    spendStrategy?: SpendStrategy | undefined;
 }) => Promise<AddressUtxoPortfolio>;
 export declare const accountUtxos: ({ account, provider, }: {
     account: Account;
     provider: Provider;
 }) => Promise<AccountUtxoPortfolio>;
 export declare const selectUtxos: (utxos: FormattedUtxo[], spendStrategy: SpendStrategy) => FormattedUtxo[];
+//# sourceMappingURL=utxo.d.ts.map

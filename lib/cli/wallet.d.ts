@@ -16,3 +16,4 @@ export declare class Wallet {
     feeRate: number;
     constructor(options?: WalletOptions);
 }
+//# sourceMappingURL=wallet.d.ts.map

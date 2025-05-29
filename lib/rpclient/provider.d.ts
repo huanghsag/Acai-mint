@@ -9,3 +9,4 @@ export declare class Provider {
     alkanes: AlkanesRpc;
     constructor(url: any);
 }
+//# sourceMappingURL=provider.d.ts.map

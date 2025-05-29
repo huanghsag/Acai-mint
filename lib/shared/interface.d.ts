@@ -572,3 +572,4 @@ export interface AlkaneId {
     block: string;
     tx: string;
 }
+//# sourceMappingURL=interface.d.ts.map

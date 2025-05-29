@@ -5,3 +5,4 @@ export declare class EsploraRpc {
         value: number;
     }[]>;
 }
+//# sourceMappingURL=esplora.d.ts.map

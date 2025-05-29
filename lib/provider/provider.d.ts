@@ -33,3 +33,4 @@ export declare class Provider {
         satsPerVByte: string;
     }>;
 }
+//# sourceMappingURL=provider.d.ts.map

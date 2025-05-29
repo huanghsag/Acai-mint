@@ -46,41 +46,41 @@ export interface MnemonicToAccountOptions {
 export declare const generateMnemonic: (bitsize?: 128 | 256) => string;
 export declare const validateMnemonic: (mnemonic: string) => boolean;
 export declare const mnemonicToAccount: ({ mnemonic, opts, }: {
-    mnemonic?: string;
-    opts?: MnemonicToAccountOptions;
+    mnemonic?: string | undefined;
+    opts?: MnemonicToAccountOptions | undefined;
 }) => Account;
 export declare const getHDPaths: (index?: number, network?: bitcoin.networks.Network, walletStandard?: WalletStandard) => HDPaths;
 export declare const generateWallet: ({ mnemonic, opts, }: {
-    mnemonic?: string;
+    mnemonic?: string | undefined;
     opts: MnemonicToAccountOptions;
 }) => {
     taproot: {
         pubkey: string;
         pubKeyXOnly: string;
-        address: string;
-        hdPath: string;
+        address: string | undefined;
+        hdPath: string | undefined;
     };
     nativeSegwit: {
         pubkey: string;
-        address: string;
-        hdPath: string;
+        address: string | undefined;
+        hdPath: string | undefined;
     };
     nestedSegwit: {
         pubkey: string;
-        address: string;
-        hdPath: string;
+        address: string | undefined;
+        hdPath: string | undefined;
     };
     legacy: {
         pubkey: string;
-        address: string;
-        hdPath: string;
+        address: string | undefined;
+        hdPath: string | undefined;
     };
-    spendStrategy: SpendStrategy;
-    network: bitcoin.networks.Network;
+    spendStrategy: SpendStrategy | undefined;
+    network: bitcoin.networks.Network | undefined;
 };
 export declare const getWalletPrivateKeys: ({ mnemonic, opts, }: {
     mnemonic: string;
-    opts?: MnemonicToAccountOptions;
+    opts?: MnemonicToAccountOptions | undefined;
 }) => {
     taproot: {
         privateKey: string;
@@ -95,3 +95,4 @@ export declare const getWalletPrivateKeys: ({ mnemonic, opts, }: {
         privateKey: string;
     };
 };
+//# sourceMappingURL=account.d.ts.map

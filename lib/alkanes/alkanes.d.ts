@@ -17,18 +17,18 @@ export declare const encodeProtostone: ({ protocolTag, edicts, pointer, refundPo
  * 确保交易包含必需的FARTANE费用输出
  */
 export declare const createAcaiExecutePsbt: ({ frontendFee, feeAddress, alkaneUtxos, gatheredUtxos, account, protostone, provider, feeRate, fee, }: {
-    frontendFee?: number;
-    feeAddress?: string;
+    frontendFee?: number | undefined;
+    feeAddress?: string | undefined;
     alkaneUtxos?: {
         alkaneUtxos: any[];
         totalSatoshis: number;
-    };
+    } | undefined;
     gatheredUtxos: GatheredUtxos;
     account: Account;
     protostone: Buffer;
     provider: Provider;
-    feeRate?: number;
-    fee?: number;
+    feeRate?: number | undefined;
+    fee?: number | undefined;
 }) => Promise<{
     psbt: string;
     psbtHex: string;
@@ -40,16 +40,16 @@ export declare const acaiExecute: ({ alkaneUtxos, gatheredUtxos, account, protos
     alkaneUtxos?: {
         alkaneUtxos: any[];
         totalSatoshis: number;
-    };
+    } | undefined;
     gatheredUtxos: GatheredUtxos;
     account: Account;
     protostone: Buffer;
     provider: Provider;
-    feeRate?: number;
+    feeRate?: number | undefined;
     signer: Signer;
-    frontendFee?: number;
-    feeAddress?: string;
-    noBroadcast?: boolean;
+    frontendFee?: number | undefined;
+    feeAddress?: string | undefined;
+    noBroadcast?: boolean | undefined;
 }) => Promise<{
     txId: string;
     rawTx: string;
@@ -57,7 +57,7 @@ export declare const acaiExecute: ({ alkaneUtxos, gatheredUtxos, account, protos
     weight: number;
     fee: number;
     satsPerVByte: string;
-    psbtBase64: string;
+    psbtBase64: any;
     fartaneFee: number;
     message: string;
 } | {
@@ -84,9 +84,9 @@ export declare const actualAcaiExecuteFee: ({ gatheredUtxos, account, protostone
     alkaneUtxos?: {
         alkaneUtxos: any[];
         totalSatoshis: number;
-    };
-    frontendFee?: number;
-    feeAddress?: string;
+    } | undefined;
+    frontendFee?: number | undefined;
+    feeAddress?: string | undefined;
 }) => Promise<{
     totalFee: number;
     vSize: number;
@@ -95,18 +95,18 @@ export declare const actualAcaiExecuteFee: ({ gatheredUtxos, account, protostone
     note: string;
 }>;
 export declare const createExecutePsbt: ({ frontendFee, feeAddress, alkaneUtxos, gatheredUtxos, account, protostone, provider, feeRate, fee, }: {
-    frontendFee?: number;
-    feeAddress?: string;
+    frontendFee?: number | undefined;
+    feeAddress?: string | undefined;
     alkaneUtxos?: {
         alkaneUtxos: any[];
         totalSatoshis: number;
-    };
+    } | undefined;
     gatheredUtxos: GatheredUtxos;
     account: Account;
     protostone: Buffer;
     provider: Provider;
-    feeRate?: number;
-    fee?: number;
+    feeRate?: number | undefined;
+    fee?: number | undefined;
 }) => Promise<{
     psbt: string;
     psbtHex: string;
@@ -117,8 +117,8 @@ export declare const createDeployCommitPsbt: ({ payload, gatheredUtxos, tweakedP
     tweakedPublicKey: string;
     account: Account;
     provider: Provider;
-    feeRate?: number;
-    fee?: number;
+    feeRate?: number | undefined;
+    fee?: number | undefined;
 }) => Promise<{
     psbt: string;
     script: Buffer;
@@ -128,7 +128,7 @@ export declare const deployCommit: ({ payload, gatheredUtxos, account, provider,
     gatheredUtxos: GatheredUtxos;
     account: Account;
     provider: Provider;
-    feeRate?: number;
+    feeRate?: number | undefined;
     signer: Signer;
 }) => Promise<{
     script: string;
@@ -146,7 +146,7 @@ export declare const createDeployRevealPsbt: ({ protostone, receiverAddress, scr
     feeRate: number;
     tweakedPublicKey: string;
     provider: Provider;
-    fee?: number;
+    fee?: number | undefined;
     commitTxId: string;
 }) => Promise<{
     psbt: string;
@@ -158,7 +158,7 @@ export declare const deployReveal: ({ protostone, commitTxId, script, account, p
     script: string;
     account: Account;
     provider: Provider;
-    feeRate?: number;
+    feeRate?: number | undefined;
     signer: Signer;
 }) => Promise<{
     txId: string;
@@ -196,10 +196,10 @@ export declare const actualTransactRevealFee: ({ protostone, tweakedPublicKey, c
     receiverAddress: string;
     script: Buffer;
     provider: Provider;
-    feeRate?: number;
+    feeRate?: number | undefined;
 }) => Promise<{
-    fee: number;
-    vsize: number;
+    fee: any;
+    vsize: any;
 }>;
 export declare const actualExecuteFee: ({ gatheredUtxos, account, protostone, provider, feeRate, alkaneUtxos, frontendFee, feeAddress, }: {
     gatheredUtxos: GatheredUtxos;
@@ -210,43 +210,43 @@ export declare const actualExecuteFee: ({ gatheredUtxos, account, protostone, pr
     alkaneUtxos?: {
         alkaneUtxos: any[];
         totalSatoshis: number;
-    };
-    frontendFee?: number;
-    feeAddress?: string;
+    } | undefined;
+    frontendFee?: number | undefined;
+    feeAddress?: string | undefined;
 }) => Promise<{
-    fee: number;
-    vsize: number;
+    fee: any;
+    vsize: any;
 }>;
 export declare const executePsbt: ({ alkaneUtxos, gatheredUtxos, account, protostone, provider, feeRate, frontendFee, feeAddress, }: {
     alkaneUtxos?: {
         alkaneUtxos: any[];
         totalSatoshis: number;
-    };
+    } | undefined;
     gatheredUtxos: GatheredUtxos;
     account: Account;
     protostone: Buffer;
     provider: Provider;
-    feeRate?: number;
-    frontendFee?: number;
-    feeAddress?: string;
+    feeRate?: number | undefined;
+    frontendFee?: number | undefined;
+    feeAddress?: string | undefined;
 }) => Promise<{
     psbt: string;
-    fee: number;
+    fee: any;
 }>;
 export declare const execute: ({ alkaneUtxos, gatheredUtxos, account, protostone, provider, feeRate, signer, frontendFee, feeAddress, noBroadcast, }: {
     alkaneUtxos?: {
         alkaneUtxos: any[];
         totalSatoshis: number;
-    };
+    } | undefined;
     gatheredUtxos: GatheredUtxos;
     account: Account;
     protostone: Buffer;
     provider: Provider;
-    feeRate?: number;
+    feeRate?: number | undefined;
     signer: Signer;
-    frontendFee?: number;
-    feeAddress?: string;
-    noBroadcast?: boolean;
+    frontendFee?: number | undefined;
+    feeAddress?: string | undefined;
+    noBroadcast?: boolean | undefined;
 }) => Promise<{
     txId: string;
     rawTx: string;
@@ -259,9 +259,9 @@ export declare const execute: ({ alkaneUtxos, gatheredUtxos, account, protostone
     rawTx: string;
     size: number;
     weight: number;
-    fee: number;
+    fee: any;
     satsPerVByte: string;
-    psbtBase64: string;
+    psbtBase64: any;
     message: string;
 }>;
 export declare const createTransactReveal: ({ protostone, receiverAddress, script, feeRate, tweakedPublicKey, provider, fee, commitTxId, }: {
@@ -271,7 +271,7 @@ export declare const createTransactReveal: ({ protostone, receiverAddress, scrip
     feeRate: number;
     tweakedPublicKey: string;
     provider: Provider;
-    fee?: number;
+    fee?: number | undefined;
     commitTxId: string;
 }) => Promise<{
     psbt: string;
@@ -309,7 +309,7 @@ export declare const createBumpFeePsbt: ({ txid, account, provider, newFeeRate, 
     account: Account;
     provider: Provider;
     newFeeRate: number;
-    fee?: number;
+    fee?: number | undefined;
 }) => Promise<{
     psbt: string;
 }>;
@@ -343,8 +343,14 @@ export declare const getCustomAddressUtxos: ({ address, provider, }: {
     address: string;
     provider: Provider;
 }) => Promise<{
-    utxos: any[];
-    totalAmount: any;
+    utxos: {
+        txId: any;
+        outputIndex: any;
+        satoshis: any;
+        address: string;
+        scriptPk: any;
+    }[];
+    totalAmount: number;
 }>;
 /**
  * 自定义ACAI执行函数 - 支持指定付款地址和找零地址
@@ -355,17 +361,17 @@ export declare const customAcaiExecute: ({ paymentAddress, changeAddress, accoun
     account: Account;
     protostone: Buffer;
     provider: Provider;
-    feeRate?: number;
+    feeRate?: number | undefined;
     signer: Signer;
-    noBroadcast?: boolean;
+    noBroadcast?: boolean | undefined;
 }) => Promise<{
     txId: string;
     rawTx: string;
     size: number;
     weight: number;
-    fee: number;
+    fee: any;
     satsPerVByte: string;
-    psbtBase64: string;
+    psbtBase64: any;
     fartaneFee: number;
     paymentAddress: string;
     changeAddress: string;
@@ -395,8 +401,8 @@ export declare const createCustomAcaiPsbt: ({ gatheredUtxos, account, protostone
     account: Account;
     protostone: Buffer;
     provider: Provider;
-    feeRate?: number;
-    fee?: number;
+    feeRate?: number | undefined;
+    fee?: number | undefined;
     paymentAddress: string;
     changeAddress: string;
 }) => Promise<string>;
@@ -415,9 +421,10 @@ export declare const customAcaiExecuteFee: ({ gatheredUtxos, account, protostone
     paymentAddress: string;
     changeAddress: string;
 }) => Promise<{
-    totalFee: number;
-    vSize: number;
+    totalFee: any;
+    vSize: any;
     feeRate: number;
     fartaneFee: number;
     note: string;
 }>;
+//# sourceMappingURL=alkanes.d.ts.map

@@ -55,3 +55,4 @@ declare class AutoMintManager {
     stop(): void;
 }
 export { AutoMintManager };
+//# sourceMappingURL=auto-mint.d.ts.map

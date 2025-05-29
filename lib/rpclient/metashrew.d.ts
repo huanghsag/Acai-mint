@@ -6,3 +6,4 @@ export declare class MetashrewOverride {
     get(): any;
 }
 export declare const metashrew: MetashrewOverride;
+//# sourceMappingURL=metashrew.d.ts.map

@@ -1,10 +1,9 @@
-import { Provider } from '..';
 export declare const DEFAULT_PROVIDER: {
-    alkanes: Provider;
-    bitcoin: Provider;
-    regtest: Provider;
-    oylnet: Provider;
-    signet: Provider;
+    alkanes: any;
+    bitcoin: any;
+    regtest: any;
+    oylnet: any;
+    signet: any;
 };
 export declare const REGTEST_FAUCET: {
     mnemonic: string;
@@ -28,3 +27,4 @@ export declare const TEST_WALLET: {
         publicKey: string;
     };
 };
+//# sourceMappingURL=constants.d.ts.map
