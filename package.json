@@ -13,10 +13,10 @@
     "dev": "tsc -w",
     "prettier": "prettier --write ./src/**/*.ts",
     "test": "jest",
-    "acai": "acai"
+    "oyl": "oyl"
   },
   "bin": {
-    "acai": "./bin/acai.js"
+    "oyl": "./bin/oyl.js"
   },
   "author": "Zzzzzarvis",
   "license": "MIT",
